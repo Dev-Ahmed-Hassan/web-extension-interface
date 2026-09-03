@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naukri Nigran Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Neo-Brutalist Header -->
+    <header class="header">
+      <div class="header-top">
+        <span class="badge-title">NAUKRI NIGRAN</span>
+        <span class="version-tag">V2.0 OSINT</span>
+      </div>
+      <h1 class="main-title">JOB SCAM DETECTOR</h1>
+      <p class="subtitle">AGENTIC OSINT AUTHENTICITY VERIFIER</p>
+    </header>
+
+    <!-- Input Section -->
+    <div class="card input-card">
+      <div class="card-header">
+        <span class="card-label">TARGET JOB OFFER</span>
+        <button id="btn-grab" class="btn-sm" title="Grab highlighted text from current page">AUTO-GRAB TEXT</button>
+      </div>
+      <textarea id="input-text" placeholder="Paste job offer text, WhatsApp message, or click AUTO-GRAB to capture highlighted text from page..."></textarea>
+      
+      <button id="btn-analyze" class="btn-primary">
+        <span>RUN OSINT SCAN</span>
+      </button>
+    </div>
+
+    <!-- Loading Overlay / Spinner -->
+    <div id="loading-container" class="card loading-card hidden">
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <p class="loading-text">EXECUTING MULTI-ENGINE OSINT SCAN...</p>
+      <span class="loading-sub">Searching WHOIS, LinkedIn, Scam Index & Evidence Cache</span>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results-container" class="hidden">
+      <!-- Verdict Card -->
+      <div id="verdict-card" class="card verdict-card">
+        <div class="verdict-header">
+          <span id="verdict-badge" class="verdict-badge">SCAN COMPLETE</span>
+          <div class="score-box">
+            <span class="score-label">SCORE</span>
+            <span id="score-val" class="score-val">--/100</span>
+          </div>
+        </div>
+        
+        <div class="entity-info">
+          <span class="entity-label">TARGET ENTITY</span>
+          <h2 id="entity-name" class="entity-name">UNKNOWN ENTITY</h2>
+        </div>
+
+        <div class="summary-box">
+          <span class="box-label">EXECUTIVE SUMMARY</span>
+          <p id="summary-text" class="summary-text">Summary results will appear here after analysis.</p>
+        </div>
+
+        <!-- Action Items -->
+        <div class="actions-box">
+          <span class="box-label">RECOMMENDED ACTIONS</span>
+          <ul id="actions-list" class="actions-list">
+          </ul>
+        </div>
+
+        <!-- Permalink Link Button -->
+        <a id="report-link" href="#" target="_blank" class="btn-secondary hidden">
+          <span>VIEW FULL DOSSIER & DOWNLOAD PDF &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>POWERED BY NAUKRI NIGRAN V2 ENGINE</span>
+      <a href="https://naukrinigran.vercel.app" target="_blank" class="footer-link">naukrinigran.vercel.app</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

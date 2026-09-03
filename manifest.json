@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Naukri Nigran - Job Scam Detector",
+  "version": "2.0.0",
+  "description": "Instant Agentic OSINT job scam verification & authenticity score powered by Naukri Nigran.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Naukri Nigran Job Scam Detector"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://phishing-detector-self-five.vercel.app/*",
+    "https://naukrinigran.vercel.app/*"
+  ]
+}
