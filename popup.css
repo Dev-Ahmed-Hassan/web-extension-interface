@@ -1,0 +1,353 @@
+/* NAUKRI NIGRAN - NEO-BRUTALIST EXTENSION STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 400px;
+  margin: 0;
+  padding: 10px;
+  background-color: #f4f4f5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* NEO-BRUTALIST HEADER */
+.header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 12px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.badge-title {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 2px 6px;
+  letter-spacing: 1px;
+}
+
+.version-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #a1a1aa;
+}
+
+.main-title {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #a1a1aa;
+  margin-top: 4px;
+}
+
+/* NEO-BRUTALIST CARDS */
+.card {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-label {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+textarea {
+  width: 100%;
+  height: 90px;
+  border: 2px solid #000000;
+  padding: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  resize: none;
+  background-color: #fafafa;
+  color: #000000;
+  outline: none;
+}
+
+textarea:focus {
+  background-color: #ffffff;
+  border-color: #000000;
+  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+/* BUTTONS */
+.btn-primary {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 10px;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: #18181b;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.btn-sm {
+  background-color: #f4f4f5;
+  color: #000000;
+  border: 2px solid #000000;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 3px 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.btn-sm:hover {
+  background-color: #e4e4e7;
+}
+
+.btn-secondary {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  margin-top: 6px;
+}
+
+.btn-secondary:hover {
+  background-color: #f4f4f5;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* LOADING STATE */
+.loading-card {
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.loading-bar-container {
+  width: 100%;
+  height: 12px;
+  border: 2px solid #000000;
+  background-color: #e4e4e7;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.loading-bar {
+  width: 50%;
+  height: 100%;
+  background-color: #000000;
+  animation: slide 1.2s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.loading-text {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.loading-sub {
+  font-size: 9px;
+  color: #71717a;
+}
+
+/* RESULTS & VERDICT CARD */
+.verdict-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000000;
+}
+
+.verdict-badge {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  border: 2px solid #000000;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.verdict-badge.red {
+  background-color: #dc2626;
+}
+
+.verdict-badge.amber {
+  background-color: #d97706;
+}
+
+.verdict-badge.green {
+  background-color: #16a34a;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.score-label {
+  font-size: 8px;
+  font-weight: 900;
+  color: #71717a;
+}
+
+.score-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.entity-info {
+  margin-top: 4px;
+}
+
+.entity-label {
+  font-size: 9px;
+  font-weight: 900;
+  color: #71717a;
+  letter-spacing: 0.5px;
+}
+
+.entity-name {
+  font-size: 16px;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.box-label {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #000000;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.summary-box {
+  background-color: #f4f4f5;
+  border: 2px solid #000000;
+  padding: 8px;
+}
+
+.summary-text {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #18181b;
+}
+
+.actions-box {
+  border: 2px solid #000000;
+  padding: 8px;
+  background-color: #ffffff;
+}
+
+.actions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.actions-list li {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #000000;
+  padding-left: 12px;
+  position: relative;
+}
+
+.actions-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+  font-weight: 700;
+  color: #71717a;
+  padding-top: 4px;
+}
+
+.footer-link {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+.hidden {
+  display: none !important;
+}
